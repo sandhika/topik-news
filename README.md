@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # Usage
 
 1. Install [NodeJS](https://nodejs.org/en/download/)
-2. Clone https://github.com/sandhika/mini-wallet-api to local folder
+2. Clone https://github.com/sandhika/topik-news to local folder
 2. Run command terminal in folder mini-wallet-api then install using :
 
     $ npm install
