@@ -1,0 +1,29 @@
+<mat-card >
+  <mat-card-title>
+    {{(data?data.title:'')}}
+  </mat-card-title>
+
+  <mat-card-content>
+    {{(data?data.score:'')}} points by <b style="padding: 0 5px;">{{(data?data.by:'')}}</b>
+    <i style="padding: 0 5px;"> {{toDate((data?data.time:0))}} </i>
+    | {{(data?data.kids.length:0)}} comments
+    <hr/>
+        <div class="center" [hidden]="!isLoading">
+          <mat-spinner ></mat-spinner>
+        </div>
+        <div class="div2" *ngFor="let item of comments; let i = index">
+            <h4>{{item.by}} {{toDate(item.time)}}</h4>
+            <hr/>
+            <p [innerHTML]="truncateString(item.text,200)"></p>
+
+        </div>
+
+
+  </mat-card-content>
+
+  <mat-card-actions style="padding: 2 5px;">
+
+    <button mat-raised-button (click)="onNoClick()" color="primary">Close</button>
+
+  </mat-card-actions>
+</mat-card>

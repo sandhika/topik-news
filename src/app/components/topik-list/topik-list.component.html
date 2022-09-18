@@ -1,0 +1,12 @@
+
+<mat-card *ngFor="let item of news; let i = index" (click)="openDetail(item)" class="card" >
+  <mat-card-title>{{i+1}}.<a target='_blank'  style="padding: 0 5px;">{{item.title}}</a></mat-card-title>
+
+  <mat-card-content>
+      {{item.score}} points by <b style="padding: 0 5px;">{{item.by}}</b>
+       <i style="padding: 0 5px;"> {{toDate(item.time)}} </i>
+       | {{item.kids.length}} comments
+
+  </mat-card-content>
+  </mat-card>
+
